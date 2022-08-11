@@ -25,6 +25,10 @@
 .App-link {
   color: rgb(112, 76, 182);
 }
+.form-control:disabled {
+  background-color: #a2b2b5;
+  opacity: 1;
+}
 
 @keyframes App-logo-float {
   0% {
