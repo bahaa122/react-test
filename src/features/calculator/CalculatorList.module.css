@@ -1,0 +1,12 @@
+.minus {
+  color: red !important;
+  font-weight: 700 !important;
+}
+.plus {
+  color: green !important;
+  font-weight: 700 !important;
+}
+.btn-delete {
+  background-color: red !important;
+  color: white !important;
+}

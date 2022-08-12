@@ -5,6 +5,7 @@ import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import SplitButton from "react-bootstrap/SplitButton";
 import Button from "react-bootstrap/Button";
+import styles from "./CalculatorList.module.css";
 
 const selectTodoById = (state, todoId) => {
   return state.calculator?.record.find((todo) => todo.id === todoId);
@@ -54,25 +55,32 @@ export function CalculatorList({ id }) {
 
   return (
     <div>
-      <InputGroup className="mb-3">
+      {console.log(operators)}
+      <InputGroup className="mb-3" style={{ color: "red" }}>
         <SplitButton
           variant="outline-secondary"
           title={operators}
           id="segmented-button-dropdown-1"
           onSelect={handleOperatorsChanged}
+          className={styles.plus}
         >
-          <Dropdown.Item eventKey="+">+</Dropdown.Item>
-          <Dropdown.Item eventKey="-">-</Dropdown.Item>
+          <Dropdown.Item className={styles.plus} eventKey="+">
+            +
+          </Dropdown.Item>
+          <Dropdown.Item className={styles.minus} eventKey="-">
+            -
+          </Dropdown.Item>
         </SplitButton>
         <Form.Control
           disabled={todo.disable}
           value={count}
+          className="text-center"
           type="number"
           aria-label="Text input with dropdown button"
           onChange={handleChange}
         />
         <Button
-          style={{ backgroundColor: "red", color: "white" }}
+          className={styles["btn-delete"]}
           variant="outline-secondary"
           onClick={handleDelete}
         >

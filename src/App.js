@@ -10,6 +10,7 @@ function App() {
     <div className="App">
       <Header />
       <header className="App-header">
+        <img className="App-logo" width="5%" src={logo} />
         <h3>Welcome to the React Challenge</h3>
         <br />
         <Calculator />
