@@ -34,7 +34,6 @@ const calculatorSlice = (state = initialState, action) =>
               operators: action.payload.operators,
             },
           ],
-          total: total(state.record),
         };
       }
 

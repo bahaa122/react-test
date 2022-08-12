@@ -23,8 +23,10 @@ export function Calculator() {
             <span className={styles.text}>
               please Click Add New <br />
             </span>
+          ) : data.total < 0 ? (
+            <span style={{ color: "red" }}>{data.total}</span>
           ) : (
-            data.total
+            <span>{data.total}</span>
           )}
         </span>
       </div>
